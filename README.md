@@ -31,6 +31,6 @@ Se você tiver interesse em contribuir com algum dos projetos ou sistemas, fique
 Caso queira entrar em contato comigo, você pode me encontrar nos seguintes canais:
 
 - Email: ruggery@gmail.com
-- LinkedIn: https://www.linkedin.com/in/ruggery-meira-navarro-ribeiro-96756728/
+- LinkedIn: [Meu Perfil linkedin](https://www.linkedin.com/in/ruggery-meira-navarro-ribeiro-96756728/)
 
 Obrigado por visitar meu hub de projetos e sistemas!
