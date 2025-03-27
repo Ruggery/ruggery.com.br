@@ -1,0 +1,27 @@
+.setic-footer {
+    margin-top: 40px; /* Espaço acima do rodapé */
+    padding-top: 20px; /* Espaço interno superior */
+    border-top: 1px solid #e0e0e0; /* Linha divisória sutil */
+    font-size: 0.85rem; /* Tamanho de fonte menor */
+    color: var(--trt13-secondary-gray); /* Cor mais suave */
+    line-height: 1.5;
+}
+
+.setic-footer p {
+    margin-bottom: 10px; /* Espaço entre os parágrafos do rodapé */
+}
+
+.setic-footer p:last-child {
+    margin-bottom: 0;
+}
+
+/* Ajuste no Media Query se necessário */
+@media (max-width: 480px) {
+    /* ... (regras anteriores do media query) ... */
+
+    .setic-footer {
+        margin-top: 30px;
+        padding-top: 15px;
+        font-size: 0.8rem;
+    }
+}
