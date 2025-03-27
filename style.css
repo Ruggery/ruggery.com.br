@@ -1,3 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Variáveis de Cor (Ajuste estas cores para corresponder EXATAMENTE à identidade visual do TRT13) */
+:root {
+    --trt13-primary-blue: #003366; /* Azul escuro institucional (exemplo) */
+    --trt13-secondary-gray: #6c757d; /* Cinza (exemplo) */
+    --trt13-light-background: #f8f9fa; /* Fundo claro (exemplo) */
+    --trt13-text-color: #333333; /* Cor de texto principal */
+    --trt13-white: #ffffff;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fonte formal e limpa */
+    background-color: var(--trt13-light-background);
+    color: var(--trt13-text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+    padding: 20px;
+}
+
+.container {
+    max-width: 600px;
+    width: 100%;
+    padding: 40px;
+    background-color: var(--trt13-white);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Regra do logo atualizada */
+.logo {
+    width: 25vw;       /* Define a largura como 1/4 (25%) da largura da viewport */
+    max-width: 150px;  /* Limita a largura máxima a 150px para evitar distorções em telas grandes */
+    height: auto;      /* Mantém a proporção da imagem */
+    margin-bottom: 30px; /* Espaçamento abaixo do logo */
+}
+
+.error-code {
+    font-size: 6rem; /* Tamanho grande para o código 404 */
+    font-weight: bold;
+    color: var(--trt13-primary-blue);
+    margin-bottom: 10px;
+    line-height: 1;
+}
+
+.error-message {
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: var(--trt13-primary-blue);
+    margin-bottom: 15px;
+}
+
+.error-description {
+    font-size: 1rem;
+    color: var(--trt13-secondary-gray);
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Espaçamento entre os botões */
+    flex-wrap: wrap; /* Permite que os botões quebrem linha em telas menores */
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    min-width: 120px; /* Largura mínima para melhor aparência */
+}
+
+.btn:hover {
+    transform: translateY(-2px); /* Efeito sutil ao passar o mouse */
+    filter: brightness(95%); /* Escurece levemente */
+}
+
+.btn-primary {
+    background-color: var(--trt13-primary-blue);
+    color: var(--trt13-white);
+}
+
+.btn-secondary {
+    background-color: var(--trt13-secondary-gray);
+    color: var(--trt13-white);
+}
+
 .setic-footer {
     margin-top: 40px; /* Espaço acima do rodapé */
     padding-top: 20px; /* Espaço interno superior */
@@ -15,13 +117,42 @@
     margin-bottom: 0;
 }
 
-/* Ajuste no Media Query se necessário */
+/* Media Query para telas menores (opcional, mas recomendado) */
 @media (max-width: 480px) {
-    /* ... (regras anteriores do media query) ... */
-
+    .container {
+        padding: 25px;
+    }
+    .error-code {
+        font-size: 4.5rem;
+    }
+    .error-message {
+        font-size: 1.5rem;
+    }
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+        width: 100%; /* Faz os botões ocuparem a largura total */
+        margin-bottom: 10px; /* Adiciona espaço quando empilhados */
+    }
+    .button-container {
+        flex-direction: column; /* Empilha os botões verticalmente */
+        gap: 10px;
+    }
+    .btn:last-child {
+        margin-bottom: 0;
+    }
     .setic-footer {
         margin-top: 30px;
         padding-top: 15px;
         font-size: 0.8rem;
     }
+    /* Ajuste opcional do logo em telas muito pequenas, se 25vw for muito pequeno */
+    /* .logo { min-width: 80px; } */
 }
+
+/* Media query adicional para telas muito largas, caso 150px ainda seja pequeno */
+/* @media (min-width: 1200px) {
+    .logo {
+        max-width: 200px; /* Aumenta o limite em telas maiores */
+    }
+} */
